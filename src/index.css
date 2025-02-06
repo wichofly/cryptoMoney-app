@@ -1,5 +1,5 @@
 :root {
-  --white: #F8F5E9;
+  --white: #F8FAFC;
   --black: #09122C;
   --primary: #9DC08B;
   --secondary: #3A7D44;
@@ -18,6 +18,7 @@ body {
   background-size: cover;
   overflow: hidden;
   font-family: "Lato", serif;
+  font-size: 2rem;
 }
 
 .container {
@@ -45,4 +46,41 @@ body {
   background-color: var(--white);
   border-radius: 1rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.form,
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form {
+  label {
+    color: var(--black);
+  }
+
+  select {
+    background-color: #f4f2eb;
+    border: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 1.8rem;
+  }
+
+  [type='submit'] {
+    background-color: var(--third);
+    color: var(--white);
+    border: none;
+    padding: 1rem;
+    font-weight: 900;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    transition: background-color 300ms ease;
+  }
+
+  [type='submit']:hover {
+    background-color: #c75115;
+  }
 }
