@@ -1,0 +1,48 @@
+:root {
+  --white: #F8F5E9;
+  --black: #09122C;
+  --primary: #9DC08B;
+  --secondary: #3A7D44;
+  --third: #DF6D14;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/src/assets/crypto-bg.webp');
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  font-family: "Lato", serif;
+}
+
+.container {
+  max-width: 60rem;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.app-title {
+  font-size: 4rem;
+  margin-top: 5rem;
+  color: var(--white);
+  line-height: .9;
+}
+
+.app-title span {
+  display: block;
+  color: var(--third);
+  font-size: 4.8rem;
+}
+
+.content {
+  margin-top: 5rem;
+  padding: 6rem 2rem;
+  background-color: var(--white);
+  border-radius: 1rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}

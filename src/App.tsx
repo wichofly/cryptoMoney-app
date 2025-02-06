@@ -1,11 +1,14 @@
-
 function App() {
-
   return (
     <>
-      <h1>Hi my Wicho friend</h1>
+      <div className="container">
+        <h1 className="app-title">
+          <span>Cryptocurrencies</span> Quoter.
+        </h1>
+        <div className="content"></div>
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
