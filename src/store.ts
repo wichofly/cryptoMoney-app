@@ -1,11 +1,12 @@
 import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
-import { CryptoCurrency } from './interfaces/interface';
-import { apiCryptos } from './service/CryptoService';
+import { CryptoCurrency, Pair } from './interfaces/interface';
+import { apiCryptos, fetchCurrentCrypto } from './service/CryptoService';
 
 interface CryptoStore {
   cryptocurrencies: CryptoCurrency[];
   fetchCryptos: () => Promise<void>;
+  fetchData: (pair: Pair) => Promise<void>;
 }
 
 export const useCryptoStore = create<CryptoStore>()(
@@ -17,6 +18,10 @@ export const useCryptoStore = create<CryptoStore>()(
       set(() => ({
         cryptocurrencies,
       }));
+    },
+
+    fetchData: async (pair) => {
+      await fetchCurrentCrypto(pair);
     },
   }))
 );
