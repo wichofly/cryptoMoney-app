@@ -5,30 +5,30 @@ const CryptoPriceDisplay = () => {
   const hasResult = Object.keys(result).length > 0;
 
   return (
-    <div>
+    <div className="result-wrapper">
       {hasResult && (
         <>
           <h2>Quotation</h2>
           <div className="result">
+            <img
+              src={`https://cryptocompare.com/${result.IMAGEURL}`}
+              alt="Crypto Image"
+            />
             <div>
-              <img
-                src={`https://cryptocompare.com/${result.IMAGEURL}`}
-                alt="Crypto Image"
-              />
               <p>
                 The price is: <span>{result.PRICE}</span>
               </p>
               <p>
-                The price is: <span>{result.HIGHDAY}</span>
+                THighest price of the day: <span>{result.HIGHDAY}</span>
               </p>
               <p>
-                The price is: <span>{result.LOWDAY}</span>
+                Lowest price of the day: <span>{result.LOWDAY}</span>
               </p>
               <p>
-                The price is: <span>{result.CHANGEPCT24HOUR}</span>
+                Last 24 hours variation: <span>{result.CHANGEPCT24HOUR}</span>
               </p>
               <p>
-                The price is: <span>{result.LASTUPDATE}</span>
+                Last update: <span>{result.LASTUPDATE}</span>
               </p>
             </div>
           </div>
