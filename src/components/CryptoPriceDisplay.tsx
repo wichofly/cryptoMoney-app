@@ -24,7 +24,7 @@ const CryptoPriceDisplay = () => {
                   The price is: <span>{result.PRICE}</span>
                 </p>
                 <p>
-                  THighest price of the day: <span>{result.HIGHDAY}</span>
+                  Highest price of the day: <span>{result.HIGHDAY}</span>
                 </p>
                 <p>
                   Lowest price of the day: <span>{result.LOWDAY}</span>
