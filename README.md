@@ -10,12 +10,12 @@ The Cryptocurrency App relies on the CryptoCompare API to fetch real-time crypto
 
 2. [Multiple Symbols Full Data API](https://min-api.cryptocompare.com/documentation?key=Toplists&cat=topExchangesFullEndpoint): This API fetches detailed trading data for a list of cryptocurrencies. It returns real-time information such as:
 
-  - IMAGEURL
-  - PRICE
-  - HIGHDAY
-  - LOWDAY
-  - CHANGEPCT24HOUR
-  - LASTUPDATE
+- IMAGEURL
+- PRICE
+- HIGHDAY
+- LOWDAY
+- CHANGEPCT24HOUR
+- LASTUPDATE
 
 This is used to display a cryptocurrency's price and trading details after the user submits the form.
 
@@ -53,3 +53,9 @@ This is used to display a cryptocurrency's price and trading details after the u
 ## Deploy in Vercel
 
 [Cryptocurrency App](https://crypto-app-flax-ten.vercel.app/)
+
+![Home Page](./src/assets/screenshots/Screenshot1.png)
+
+![Searching](./src/assets/screenshots/Screenshot2.png)
+
+![Result](./src/assets/screenshots/Screenshot3.png)
