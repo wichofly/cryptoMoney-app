@@ -6,9 +6,9 @@ Cryptocurrency App is a React-based cryptocurrency quotation app that allows use
 
 The Cryptocurrency App relies on the CryptoCompare API to fetch real-time cryptocurrency data. Two key API endpoints are used in this project:
 
-1. [Toplist by Market Cap API](https://min-api.cryptocompare.com/documentation?key=Price&cat=multipleSymbolsFullPriceEndpoint): This API provides a list of the top 10 cryptocurrencies sorted by market capitalization. It helps display popular cryptocurrencies so that users can select from a list of widely traded coins.
+1. [Toplist by Market Cap API](https://min-api.cryptocompare.com/documentation?key=Toplists&cat=TopTotalMktCapEndpointFull): This API provides a list of the top 10 cryptocurrencies sorted by market capitalization. It helps display popular cryptocurrencies so that users can select from a list of widely traded coins.
 
-2. [Multiple Symbols Full Data API](https://min-api.cryptocompare.com/documentation?key=Toplists&cat=topExchangesFullEndpoint): This API fetches detailed trading data for a list of cryptocurrencies. It returns real-time information such as:
+2. [Multiple Symbols Full Data API](https://min-api.cryptocompare.com/documentation?key=Price&cat=multipleSymbolsFullPriceEndpoint): This API fetches detailed trading data for a list of cryptocurrencies. It returns real-time information such as:
 
 - IMAGEURL
 - PRICE
