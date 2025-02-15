@@ -1,45 +1,38 @@
-import { ChangeEvent, FormEvent, useState } from 'react';
+import { useForm } from 'react-hook-form';
 import { currencies } from '../data/data';
 import { useCryptoStore } from '../store';
 import { Pair } from '../interfaces/interface';
 import ErrorMessage from './ErrorMessage';
 
 const CryptoSearchForm = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<Pair>();
+
   const cryptocurrencies = useCryptoStore((state) => state.cryptocurrencies);
   const fetchData = useCryptoStore((state) => state.fetchData);
 
-  const [pair, setPair] = useState<Pair>({
-    currency: '',
-    cryptocurrency: '',
-  });
-  const [error, setError] = useState('');
-
-  const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
-    setPair({ ...pair, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    if (Object.values(pair).includes('')) {
-      setError('All select areas are required');
-      return;
-    }
-    setError('');
-
-    fetchData(pair);
+  const onSubmit = (data: Pair) => {
+    fetchData(data);
   };
 
   return (
-    <form className="form" onSubmit={handleSubmit}>
-      {error && <ErrorMessage>{error}</ErrorMessage>}
+    <form className="form" onSubmit={handleSubmit(onSubmit)}>
+      {errors.currency && (
+        <ErrorMessage>{errors.currency.message}</ErrorMessage>
+      )}
+
+      {errors.cryptocurrency && (
+        <ErrorMessage>{errors.cryptocurrency.message}</ErrorMessage>
+      )}
+
       <div className="field">
         <label htmlFor="currency">Currency</label>
         <select
-          name="currency"
           id="currency"
-          onChange={handleChange}
-          value={pair.currency}
+          {...register('currency', { required: 'Currency is required' })}
         >
           <option value="">-- Select -- </option>
           {currencies.map((currency) => (
@@ -53,10 +46,10 @@ const CryptoSearchForm = () => {
       <div className="field">
         <label htmlFor="cryptocurrency">Cryptocurrency</label>
         <select
-          name="cryptocurrency"
           id="cryptocurrency"
-          onChange={handleChange}
-          value={pair.cryptocurrency}
+          {...register('cryptocurrency', {
+            required: 'Cryptocurrency is required',
+          })}
         >
           <option value="">-- Select -- </option>
           {cryptocurrencies.map((crypto) => (
