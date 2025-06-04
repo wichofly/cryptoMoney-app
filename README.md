@@ -52,7 +52,7 @@ This is used to display a cryptocurrency's price and trading details after the u
 
 ## Deploy in Vercel
 
-[Cryptocurrency App](https://crypto-app-flax-ten.vercel.app/)
+[Cryptocurrency App](https://crypto-money-five.vercel.app/)
 
 ![Home Page](./src/assets/screenshots/Screenshot1.png)
 
