@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
+import CryptoPriceDisplay from './components/CryptoPriceDisplay';
 import CryptoSearchForm from './components/CryptoSearchForm';
 import { useCryptoStore } from './store';
-import CryptoPriceDisplay from './components/CryptoPriceDisplay';
 
 function App() {
   const getCryptos = useCryptoStore((state) => state.fetchCryptos);

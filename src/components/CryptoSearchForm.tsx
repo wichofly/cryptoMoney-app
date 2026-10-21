@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form';
 import { currencies } from '../data/data';
-import { useCryptoStore } from '../store';
 import { Pair } from '../interfaces/interface';
+import { useCryptoStore } from '../store';
 import ErrorMessage from './ErrorMessage';
 
 const CryptoSearchForm = () => {
